@@ -1,7 +1,7 @@
 import { TradeType } from './constants'
 import invariant from 'tiny-invariant'
 import { validateAndParseAddress } from './utils'
-import { CurrencyAmount, FLR, Percent, Trade } from './entities'
+import { CurrencyAmount, CFLR, Percent, Trade } from './entities'
 
 /**
  * Options for producing the arguments to send call to the router.
@@ -66,8 +66,8 @@ export abstract class Router {
    * @param options options for the call parameters
    */
   public static swapCallParameters(trade: Trade, options: TradeOptions): SwapParameters {
-    const etherIn = trade.inputAmount.currency === FLR
-    const etherOut = trade.outputAmount.currency === FLR
+    const etherIn = trade.inputAmount.currency === CFLR
+    const etherOut = trade.outputAmount.currency === CFLR
     // the router does not support both ether in and out
     invariant(!(etherIn && etherOut), 'FLR')
     invariant(options.ttl > 0, 'TTL')

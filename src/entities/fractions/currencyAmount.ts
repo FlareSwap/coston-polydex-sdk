@@ -1,5 +1,5 @@
 import { currencyEquals } from '../token'
-import { Currency, FLR } from '../currency'
+import { Currency, CFLR } from '../currency'
 import invariant from 'tiny-invariant'
 import JSBI from 'jsbi'
 import _Big from 'big.js'
@@ -19,7 +19,7 @@ export class CurrencyAmount extends Fraction {
    * @param amount ether amount in wei
    */
   public static ether(amount: BigintIsh): CurrencyAmount {
-    return new CurrencyAmount(FLR, amount)
+    return new CurrencyAmount(CFLR, amount)
   }
 
   // amount _must_ be raw, i.e. in the native representation
