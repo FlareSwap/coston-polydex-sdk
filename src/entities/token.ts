@@ -56,12 +56,12 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
   }
 }
 
-export const WFLR = {
+export const WCFLR = {
   [ChainId.MAINNET]: new Token(
     ChainId.MAINNET,
-    '0x1D80c49BbBCd1C0911346656B529DF9E5c2F783d',
+    '0x767b25A658E8FC8ab6eBbd52043495dB61b4ea91',
     18,
-    'WFLR',
-    'Wrapped Flare'
+    'WCFLR',
+    'Wrapped Coston Flare'
   )
 }
